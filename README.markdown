@@ -12,7 +12,7 @@ Corkscrew has been compiled on :
  * FreeBSD
  * OpenBSD
  * Linux
- * Win32 (with Cygwin)
+ * Win32 (with Cygwin or MSYS2)
 
 Corkscrew has been tested with the following HTTP proxies :
  * Gauntlet
@@ -35,6 +35,25 @@ How Do I Build It?
 In the corkscrew directory type './configure' then 'make'.  Check
 out the INSTALL file for more information.
 
+On Linux:
+
+~~~
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+~~~
+
+On Windows MSYS2 run msys shell (not 32 or 64 bit one, just the msys one)
+~~~
+pacman -S cmake make gcc
+mkdir build
+cd build
+cmake .. -G "Unix Makefiles"
+make
+make install
+~~~
 
 How Do I Install It?
 --------------------
